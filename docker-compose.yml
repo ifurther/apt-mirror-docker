@@ -16,5 +16,6 @@ services:
         command: [nginx-debug, '-g', 'daemon off;']
         volumes:
             - "./mirror/mirror:/mirror:ro"
+            - "/etc/localtime:/etc/localtime:ro"
         ports:
             - "8080:80"
